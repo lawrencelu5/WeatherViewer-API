@@ -5,7 +5,7 @@ export class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div class="col-sm">
        Hi this is the home page.
       </div>
     );

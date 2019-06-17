@@ -6,9 +6,11 @@ export class Layout extends Component {
 
   render() {
     return (
-        <div>
+        <div class="container">
             <NavMenu />
-            {this.props.children} 
+            <div class="row">
+                {this.props.children} 
+            </div>
         </div>
     );
   }

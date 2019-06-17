@@ -5,9 +5,18 @@ export class NavMenu extends Component {
 
     render() {
         return (
-            <div>
-                <a href='/'>Home</a> |  <a href='/fetchdata'>Fetch data</a> | <a href='/About'>About</a>
-            </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" href="#">Weather API</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">    
+                        <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="/About">About</a>
+                    </div>
+                </div>
+            </nav>
         );
     }
 }
