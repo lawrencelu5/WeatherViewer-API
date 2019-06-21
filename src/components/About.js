@@ -4,9 +4,11 @@ export class About extends Component {
     displayName = About.name
     render() {
         return (
-            <div class="col-sm">
+        <div className="row">
+            <div className="col-sm">
                 Hi this is the about page.
-             </div>
+            </div>
+        </div>
         );
     }
 }

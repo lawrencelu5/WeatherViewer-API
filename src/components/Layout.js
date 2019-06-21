@@ -6,10 +6,12 @@ export class Layout extends Component {
 
   render() {
     return (
-        <div class="container">
+        <div className="container">
             <NavMenu />
-            <div class="row">
-                {this.props.children} 
+            <div className="row">
+              <div className='col-sm'>
+                 {this.props.children} 
+                </div>
             </div>
         </div>
     );

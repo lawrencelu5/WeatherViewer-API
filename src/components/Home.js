@@ -5,8 +5,10 @@ export class Home extends Component {
 
   render() {
     return (
-      <div class="col-sm">
-       Hi this is the home page.
+      <div className="row">
+        <div className="col-sm">
+        Hi this is the home page.
+        </div>
       </div>
     );
   }
