@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-var API_KEY = "";
+import '../css/global.css';
+var API_KEY = "625c6494b079ff8c89ae62e65f1eda6a";
 var BASE_URL = "https://api.openweathermap.org/data/2.5/weather?id=6173331&units=metric&appid=" + API_KEY;
 var TIME_SECONDS = 1000;
 
@@ -47,25 +47,29 @@ export class WeatherAPI extends Component {
   render() {
     if (!this.state.weatherData.weather) return null;
     return (
-    <div className="row">
-      <div className="col">
-      </div>
-      <div className="col">
-        <div className="card" style={{width: 18 + "rem"}}>
-            <div className="card-header">
-              <h5 className="card-title text-center">{this.state.weatherData.name}</h5>
+      <div>
+        <div className="row top-spacing">
+          </div>
+        <div className="row">
+          <div className="col">
+          </div>
+          <div className="col">
+            <div className="card" style={{width: 18 + "rem"}}>
+                <div className="card-header">
+                  <h5 className="card-title text-center">{this.state.weatherData.name}</h5>
+                </div>
+                <div className="card-img-top text-center"> <img src={this.state.weatherIcon} /> </div>
+                <div className="card-body">
+                    <p className="card-text">{this.state.localTime.toString()}</p> 
+                    <p className="card-text">It feels like <b>{this.state.celsius}°C</b>.</p>
+                    <p className="card-text">It looks like {this.state.weatherData.weather[0].description}.</p>
+                </div>
             </div>
-            <div className="card-img-top text-center"> <img src={this.state.weatherIcon} /> </div>
-            <div className="card-body">
-                <p className="card-text">{this.state.localTime.toString()}</p> 
-                <p className="card-text">It feels like <b>{this.state.celsius}°C</b>.</p>
-                <p className="card-text">It looks like {this.state.weatherData.weather[0].description}.</p>
-            </div>
+          </div>
+          <div className="col">
+          </div>
         </div>
       </div>
-      <div className="col">
-      </div>
-    </div>
     );
   }
 }
